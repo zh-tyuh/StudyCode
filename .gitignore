@@ -1,1 +1,13 @@
-.vscode
+# Visual Studio
+*.user
+*.obj
+*.ilk
+*.pdb
+*.idb
+*.log
+*.recipe
+x64/
+x86/
+Debug/
+Release/
+.vs/
