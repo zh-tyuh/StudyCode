@@ -8,6 +8,14 @@
 *.recipe
 x64/
 x86/
+bin/
+obj/
 Debug/
 Release/
 .vs/
+
+# VSCode
+.vscode/
+
+
+
