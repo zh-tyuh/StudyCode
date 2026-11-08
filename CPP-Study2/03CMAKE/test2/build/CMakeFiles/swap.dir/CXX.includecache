@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+.././include/swap.h
+iostream
+-
+
+/home/zty/Desktop/CMAKE/test2/main.cpp
+swap.h
+/home/zty/Desktop/CMAKE/test2/swap.h
+
+/home/zty/Desktop/CMAKE/test2/src/swap.cpp
+swap.h
+/home/zty/Desktop/CMAKE/test2/src/swap.h
+
