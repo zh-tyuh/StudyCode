@@ -14,10 +14,12 @@ Debug/
 Release/
 .vs/
 
+
 # VSCode
 .vscode/
 
 *.out
+*.txt
 
 
 
