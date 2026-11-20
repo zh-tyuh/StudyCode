@@ -5,9 +5,9 @@
 #include<arpa/inet.h>
 #include<netinet/in.h>
 #include<string.h>
-#define SER_IP "192.168.237.131"
+#define SER_IP "192.168.237.137"
 #define SER_PORT 8888
-#define CLI_IP "192.168.237.131"
+#define CLI_IP "192.168.237.137"
 #define CLI_PORT 9977
 
 int main()
@@ -20,19 +20,19 @@ int main()
         return -1;
     }
 
-    //2、为客户端绑定端口号，也可以不绑定，系统会为客户端随机分配端口号
-    //2.1创建一个结构体存储客户端信息
-    struct sockaddr_in cin;
-    cin.sin_addr.s_addr=inet_addr(CLI_IP);
-    cin.sin_family=AF_INET;
-    cin.sin_port=htons(CLI_PORT);
-    //为套接字绑定该信息
-    if(bind(cfd,(struct sockaddr*)&cin,sizeof(cin))==-1)
-    {
-        perror("bind error");
-        return -1;
-    }
-    printf("bind success\n");
+    // //2、为客户端绑定端口号，也可以不绑定，系统会为客户端随机分配端口号
+    // //2.1创建一个结构体存储客户端信息
+    // struct sockaddr_in cin;
+    // cin.sin_addr.s_addr=inet_addr(CLI_IP);
+    // cin.sin_family=AF_INET;
+    // cin.sin_port=htons(CLI_PORT);
+    // //为套接字绑定该信息
+    // if(bind(cfd,(struct sockaddr*)&cin,sizeof(cin))==-1)
+    // {
+    //     perror("bind error");
+    //     return -1;
+    // }
+    // printf("bind success\n");
 
     //3、将客户端与服务端建立连接
     //3.1创建信息
@@ -73,6 +73,7 @@ int main()
         }
 
         printf("收到服务端的消息为%s\n",wbuf);
+        
     }
 
     //5、关闭套接字
